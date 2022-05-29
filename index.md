@@ -11,8 +11,6 @@ AXFW's Inventory System is standalone that means that it can be run on any serve
 Syntax highlighted code block
 
 # Header 1
-## Header 2
-### Header 3
 
 - Bulleted
 - List

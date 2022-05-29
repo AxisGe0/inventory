@@ -2,10 +2,9 @@
 
 AXFW's Inventory System is standalone that means that it can be run on any server no matter what framework,
 `You must have basic Lua knowledge to use the inventory system`
-### Markdown
+### Requirements
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+*. oxmysql [Link](https://github.com/overextended/oxmysql/)
 ```markdown
 Syntax highlighted code block
 

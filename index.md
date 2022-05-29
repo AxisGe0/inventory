@@ -1,9 +1,7 @@
 ## AXFW's Inventory System
 
-You can use the [editor on GitHub](https://github.com/AxisGe0/inventory/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
+AXFW's Inventory System is standalone that means that it can be run on any server no matter what framework,
+`You must have basic Lua knowledge to use the inventory system`
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

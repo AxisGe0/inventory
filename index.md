@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## AXFW's Inventory System
 
 You can use the [editor on GitHub](https://github.com/AxisGe0/inventory/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 

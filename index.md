@@ -30,3 +30,7 @@ Example of registering/creating an item
       end,
 }
 ```
+label  `type:string`
+weight `type:number`
+Close  `type: boolean true/false`
+Use    `type: function(executed client side)`

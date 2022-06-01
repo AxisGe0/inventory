@@ -8,6 +8,16 @@ AXFW's Inventory System is standalone that means that it can be run on any serve
 
 ## Creating/Registering Items
 __inventory/main/shared.lua__
+All the items must be put inside the Items table 
+```lua
+Shared = {
+    PlayerWeight = 120000,
+    Slots = 66,
+    Items = {
+        -- Place all items here
+    },
+}
+```
 ```lua
 ['water'] = {
       label = 'Water',

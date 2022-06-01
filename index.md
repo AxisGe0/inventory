@@ -33,5 +33,5 @@ Example of registering/creating an item
 label  `type:string`\
 weight `type:number`\
 Close  `type: boolean true/false`\
-Use    `type: function(executed client side)`\
+Use    `type: function(executed client side)`
 

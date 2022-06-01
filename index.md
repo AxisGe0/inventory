@@ -18,6 +18,7 @@ Shared = {
     },
 }
 ```
+Example of registering/creating a item
 ```lua
 ['water'] = {
       label = 'Water',

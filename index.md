@@ -2,10 +2,23 @@
 
 AXFW's Inventory System is standalone that means that it can be run on any server no matter what framework,
 `You must have basic Lua knowledge to use the inventory system`
-### Requirements
+## Requirements
 
 > **oxmysql**   [Link](https://github.com/overextended/oxmysql/)
 
+## Creating/Registering Items
+__inventory/main/shared.lua__
+```lua
+['water'] = {
+      label = 'Water',
+      weight = 1000,
+      unique = false,
+      Close = false,
+      Use = function(item)
+            print('Water Used',json.encode(item))
+      end,
+}
+```
 
 ```markdown
 Syntax highlighted code block

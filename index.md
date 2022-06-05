@@ -25,6 +25,7 @@ Example of registering/creating an item
       weight = 1000,
       unique = false,
       Close = false,
+      Decaytime = 86400,
       Use = function(item)
             print('Water Used',json.encode(item))
       end,
@@ -34,6 +35,7 @@ Example of registering/creating an item
 **weight** `type:number`\
 **unique** `type: boolean true/false`\
 **Close**  `type: boolean true/false`\
+**Decaytime** `type: int (in seconds)`\
 **Use**    `type: function(executed client side,first argument/parameter returns item info)`
 ## Main
 **Getting the functions**

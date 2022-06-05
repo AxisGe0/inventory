@@ -1,1 +1,3 @@
-<h1 align:center>Documentation</h1>
+<div align="center">
+  my text here.
+</div>

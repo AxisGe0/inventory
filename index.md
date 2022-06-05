@@ -41,11 +41,11 @@ Example of registering/creating an item
 InvFunctions = exports.inventory:GetInventoryFunctions()
 ```
 **Getting Players**\
-`Client Side`
+#`Client Side`
 ```lua
 local Player = InvFunctions.GetPlayer()
 ```
-`Server Side`
+#`Server Side`
 ```lua
 local Player = InvFunctions.GetPlayer(source)
 ```

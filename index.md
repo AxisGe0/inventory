@@ -35,7 +35,7 @@ Example of registering/creating an item
 **weight** `type:number`\
 **unique** `type: boolean true/false`\
 **Close**  `type: boolean true/false`\
-**Decaytime** `type: int (in seconds)`\
+**Decaytime** `type: int (in seconds/ leave it to false if you don't want it destroyed)`\
 **Use**    `type: function(executed client side,first argument/parameter returns item info)`
 ## Main
 **Getting the functions**

@@ -40,7 +40,7 @@ Example of registering/creating an item
 ```lua
 InvFunctions = exports.inventory:GetInventoryFunctions()
 ```
-**Getting Players**
+**Getting Players**\
 `Client Side`
 ```lua
 local Player = InvFunctions.GetPlayer()

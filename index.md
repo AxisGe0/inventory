@@ -49,7 +49,8 @@ local Player = InvFunctions.GetPlayer()
 ```lua
 local Player = InvFunctions.GetPlayer(source)
 ```
-**source**  `type:number(player's id)`\\
+**source**  `type:number(player's id)`\
+\
 **Adding Items**\
 `Server Side`
 ```lua

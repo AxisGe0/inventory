@@ -61,6 +61,7 @@ if IsDuplicityVersion() then
             end
             self.Functions.AddItem = function(item,amount,slot,info)
                 local info = info or {quality=100}
+                if not info.startdate then info.startdate = os.time() end 
                 local amount = tonumber(amount)
                 local slot = tonumber(slot) or nil
                 if not Shared.Items[item] then print('Item Not Found') return false end
@@ -150,6 +151,9 @@ if IsDuplicityVersion() then
                 Functions.DBQuery("UPDATE `player-inventory` SET `inventory`='"..json.encode(self.inventory).."' WHERE `identifier`='"..identifier.."' ")
                 return true
             end
+        end
+        for k,v in pairs(Players[src].inventory) do
+            v.info.quality = GetQualityPercentage(v.name,v.info.startdate or os.time())
         end
         return Players[src]
     end

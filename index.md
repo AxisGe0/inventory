@@ -35,3 +35,8 @@ Example of registering/creating an item
 **unique** `type: boolean true/false`\
 **Close**  `type: boolean true/false`\
 **Use**    `type: function(executed client side,first argument/parameter returns item info)`
+## Exports
+**Getting the functions**
+```lua
+InvFunctions = exports.inventory:GetInventoryFunctions()
+```

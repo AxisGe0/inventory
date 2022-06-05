@@ -50,3 +50,10 @@ local Player = InvFunctions.GetPlayer()
 local Player = InvFunctions.GetPlayer(source)
 ```
 **source**  `type:number(player's id)`
+**Adding Items**\
+`Server Side`
+```lua
+local Player = InvFunctions.GetPlayer(source)
+Player.Functions.AddItem(name,amount,slot,info)
+```
+

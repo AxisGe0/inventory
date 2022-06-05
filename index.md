@@ -60,7 +60,8 @@ Player.Functions.AddItem(name,amount,slot,info)
 **name**  `type:string`\
 **amount** `type:number`\
 **slot** `type:number(leave it nil if not required)`\
-**info**  `type: table`
+**info**  `type: table`\
+\
 **Removing Items**\
 `Server Side`
 ```lua

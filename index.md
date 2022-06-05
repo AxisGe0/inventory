@@ -61,3 +61,12 @@ Player.Functions.AddItem(name,amount,slot,info)
 **amount** `type:number`\
 **slot** `type:number(leave it nil if not required)`\
 **info**  `type: table`
+**Removing Items**\
+`Server Side`
+```lua
+local Player = InvFunctions.GetPlayer(source)
+Player.Functions.Remove(name,amount,slot)
+```
+**name**  `type:string`\
+**amount** `type:number`\
+**slot** `type:number(leave it nil if not required)`\

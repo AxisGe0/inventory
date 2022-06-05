@@ -42,7 +42,11 @@ InvFunctions = exports.inventory:GetInventoryFunctions()
 ```
 **Getting Players**
 `Client Side`
+```lua
 local Player = InvFunctions.GetPlayer()
+```
 `Server Side`
+```lua
 local Player = InvFunctions.GetPlayer(source)
+```
 **source**  `type:number(player's id)`

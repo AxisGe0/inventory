@@ -63,7 +63,6 @@ Player.Functions.AddItem(name,amount,slot,info)
 **amount** `type:number`\
 **slot** `type:number(leave it nil if not required)`\
 **info**  `type: table`\
-\
 
 <hr/>
 
@@ -76,8 +75,6 @@ Player.Functions.Remove(name,amount,slot)
 **name**  `type:string`\
 **amount** `type:number`\
 **slot** `type:number(leave it nil if not required)`
-\
-
 
 <hr/>
 

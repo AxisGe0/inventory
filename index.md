@@ -64,6 +64,9 @@ Player.Functions.AddItem(name,amount,slot,info)
 **slot** `type:number(leave it nil if not required)`\
 **info**  `type: table`\
 \
+
+<hr/>
+
 **Removing Items**\
 `Server Side`
 ```lua

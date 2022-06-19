@@ -75,6 +75,7 @@ Player.Functions.Remove(name,amount,slot)
 **slot** `type:number(leave it nil if not required)`
 \
 \
+<hr/>
 **Getting Player Inventory**\
 `Server Side`
 ```lua

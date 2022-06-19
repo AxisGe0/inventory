@@ -42,6 +42,9 @@ Example of registering/creating an item
 ```lua
 InvFunctions = exports.inventory:GetInventoryFunctions()
 ```
+
+<hr/>
+
 **Getting Players**\
 `Client Side`
 ```lua

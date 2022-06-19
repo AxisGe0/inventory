@@ -72,7 +72,7 @@ Player.Functions.Remove(name,amount,slot)
 ```
 **name**  `type:string`\
 **amount** `type:number`\
-**slot** `type:number(leave it nil if not required)`
+*slot* `type:number(leave it nil if not required)`
 \
 \
 **Getting Player Inventory**\

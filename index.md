@@ -13,6 +13,7 @@ All the items must be put inside the Items table
 Shared = {
     PlayerWeight = 120000,
     Slots = 66,
+    Debug = true,
     Items = {
         -- Place all items here
     },

@@ -81,7 +81,7 @@ Player.Functions.Remove(name,amount,slot)
 local Player = InvFunctions.GetPlayer(source)
 print(Player.inventory)
 ```
-`Client Side Side`
+`Client Side`
 ```lua
 local Player = InvFunctions.GetPlayer()
 print(Player.inventory)

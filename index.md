@@ -94,3 +94,4 @@ print(Player.inventory)
 local Player = InvFunctions.GetPlayer()
 print(Player.inventory)
 ```
+<hr/>

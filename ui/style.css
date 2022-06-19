@@ -1,0 +1,411 @@
+body{
+    overflow: hidden;
+    font-family: Axis;
+    color: #eee;
+    padding: 0;
+    margin:0;
+    font-size: 2.56vh;
+    user-select: none;
+}
+@font-face {
+    font-family: Axis;
+    src: url(ChaletComprimeCologneSixty.ttf);
+}
+.inventory{
+    display: none;
+}
+.bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url(cloth/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity:1;
+}
+.player-inventory{
+    position: absolute;
+    top:26vh;
+    left:25vw;
+    height: 46vh;
+    width: 31vw;
+    overflow-y: scroll;
+    padding-left: 0.1vh;
+}
+.other-inventory{
+    display: none;
+    position: absolute;
+    top:26vh;
+    right:12vw;
+    height: 46vh;
+    width: 31vw;
+    overflow-y: scroll;
+    padding-left: 0.1vh;
+}
+.player-quick{
+    position: absolute;
+    width: 4.3vw;
+    top:50%;
+    left: 1vw;
+    transform: translateY(-50%);
+}
+.player-pocket{
+    position: absolute;
+    top:10vh;
+    left:25vw;
+    /*width: 31vw;*/
+    width:auto;
+}
+.inventory-weight-head{
+    position: relative;
+    top:4vh;
+    left:5vh;
+}
+.progress-bar{
+    display: flex;
+    position: relative;
+    width: 8vh;
+    height: 8vh;
+    top:-2vh;
+    left:18.8vh;
+    justify-content: center;
+}
+.progress-bar i{
+    position: absolute;
+    top:4vh;
+    font-size: 2.5vh;
+}
+.cloth-items{
+    position: absolute;
+    top:10vh;
+    right:23vw;
+}
+.item-box {
+    display: inline-flex;
+    width: 8vh;
+    height: 8vh;
+    border-left: 0.1vh solid rgba(169, 169, 169,0.6);
+    border-bottom: 0.1vh solid rgba(169, 169, 169,0.6);
+    border-top: 0.1vh solid rgba(169, 169, 169,0.6);
+    transform: rotate(-90deg);
+    margin-top:1vh;
+    margin-right:0.5vw;
+    justify-content: center;
+    place-items: center;
+}
+.item-box:before{
+    content: "";
+    height: 20%;
+    position: absolute;
+    right: 0;
+    border-right: 0.1vh solid rgba(169, 169, 169,0.6);
+}
+.item-box:after {
+    content: "";
+    height: 20%;
+    position: absolute;
+    right: 0;
+    top:0;
+    border-right: 0.1vh solid rgba(169, 169, 169,0.6);
+}
+.item-box *{
+  transform: rotate(90deg);
+}
+.item-box:before {
+    bottom: 0;
+    height: 50%;
+}
+.item-box img{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    /*filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);*/
+}
+.item-amount{
+    position: absolute;
+    right:-0.9vh;
+    font-size: 1.5vh;
+    width: 2.3vh;
+    height: 2vh;
+    overflow:hidden;
+}
+.cloth-items *{
+    display: flex;
+    opacity: 0.7;
+}
+.cloth-items .item-box:hover{
+    opacity: 0.2;
+}
+.cloth-items img{
+    width: 40%;
+    height: 40%;
+    right: 1vh;
+}
+.cloth-items .item-box:nth-child(9){
+    position: absolute;
+    right:-10vh;
+    bottom:0vh;
+}
+.cloth-items > .item-box > span{
+    position: relative;
+    right:1.9vh;
+    font-size: 2vh;
+}
+.skel{
+    position: absolute;
+    width: 24vw;
+    height: 90vh;
+    right: 4.5vh;
+    top: 5vh;
+    opacity: 0.7;
+    z-index: -1;
+}
+#amount {
+    position: absolute;
+    left: 30.1vw;
+    top: 10.3vh;
+    background: transparent;
+    z-index: 1;
+    border: 0.1vh solid rgba(169, 169, 169,0.6);
+    outline: none;
+    font-family: 'Axis';
+    color: white;
+    width: 8vh;
+    height: 2.3vh;
+    text-align: center;
+}
+#search {
+    position: absolute;
+    left: 35.1vw;
+    top: 10.3vh;
+    background: transparent;
+    z-index: 1;
+    border: 0.1vh solid rgba(169, 169, 169,0.6);
+    outline: none;
+    font-family: 'Axis';
+    color: white;
+    width: 8vh;
+    height: 2.3vh;
+    text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.logs {
+    position: absolute;
+    bottom: 0;
+    right:0;
+    text-align: right;
+    color:white;
+    font-size: 1.5vh;
+    height: 8vh;
+    overflow-y: scroll;
+}
+.logs p{
+    line-height: 0.1vh;
+}
+.use-item{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 8vh;
+    border:1px solid red;
+    display: inline-flex;
+    justify-content: center;
+    place-items: center;
+    border: none;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(1vh);
+    font-size:2vh;
+}
+.use-item-text i {
+    transform: rotate(0deg);
+    margin-right: 0.3vw;
+    top: -0.4vh;
+    position: relative;
+}
+
+.item-crafting{
+    display: inline-block;
+    border:0.1vh solid rgba(255, 255, 255,0.3);
+    width: 12vw;
+    height: 15vh;
+    text-align: right;
+    margin-top: 1vh;
+    border-radius: 0.5vh;
+}
+.item-crafting .left{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    right:0%;
+}
+.item-crafting .item-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    top:4vh;
+}
+.item-crafting .right{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    top:-100%;
+    left:40%;
+    text-align: left;
+}
+.item-crafting .right span{
+    display: inline-block;
+    font-size:2vh;
+}
+.recipe img{
+    display: inline;
+    position: relative;
+    width:3vh;
+    height:3vh;
+    transform:translate(-2%, 41%);
+}
+.craft-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255,0.5);
+    width: 6vh;
+    height: 3vh;
+    top:12vh;
+    border-radius: 0.4vh;
+}
+.craft-button:hover{
+    opacity: 0.6;
+}
+
+.crafting-inventory{
+    position: absolute;
+    top:26vh;
+    right:12vw;
+    height: 46vh;
+    width: 31vw;
+    overflow-y: scroll;
+    padding-left: 0.1vh;
+}
+.crafting-toggle{
+    position: absolute;
+    bottom: 11vh;
+    left: 1vh;
+    backdrop-filter: blur(1vh);
+    font-size: 2vh;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1vh;
+    padding: 1vh 2vh 1vh 2vh;
+    font-size: 2.1vh;
+}
+.crafting-toggle i{
+    margin-right: 1vh;
+}
+.crafting-toggle:hover{
+    opacity: 0.5;
+}
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+::-webkit-scrollbar-track {  
+    background: transparent;
+}
+.quick-hotbar{
+    display: none;
+    position: absolute;
+    width: 4.3vw;
+    top:50%;
+    right: -10vw;
+    transform: translateY(-50%);
+}
+.item-hotbar-key{
+    display: flex;
+    position: relative;
+    top: -6vh;
+    right: 3vh;
+    border: 0.1vh solid rgba(169, 169, 169,0.6);
+    width: 2vh;
+    height: 2vh;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    font-size:2.5vh
+}
+.ui-tooltip{
+    border: none;
+    box-shadow: none;
+    color:white;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1vh;
+    padding: 1vh 2vh 1vh 2vh;
+    font-family: Axis;
+    font-size:2vh;
+}
+.settings{
+    position: absolute;
+    display: block;
+    right: 1vh;
+    bottom: 10vh;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1vh;
+    padding: 1vh 1vh 1vh 1vh;
+}
+.settings-tab{
+    display: none;
+    position: absolute;
+    width: 30vh;
+    height: 10vh;
+    left: -2vh;
+    top: -10vh;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1vh;
+    padding: 1vh 1vh 1vh 1vh;
+    font-size:2vh
+}
+.settings-tab span{
+    display: block;
+    margin-top:0.5vh;
+}
+.drop-item{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 6.5vh;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1vh;
+    padding: 1.5vh 3vh 1.5vh 3vh;
+    text-align: center;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+    color: white;
+}
+.item-quality{
+    position: absolute;
+    width: 100%;
+    background: #2ACAFF;
+    right: 3.7vh;
+    height: 0.4vh;
+    border-radius: 0.5vh;
+}

@@ -1,0 +1,104 @@
+<head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="progressbar.js"></script>
+</head>
+<body>
+    <div class="inventory">
+        <div class="bg"></div>
+        <div class="inventory-head">
+            <div class="inventory-weight-head">80.0 /<span style="opacity: 0.5;"> 120.0</span></div>
+            <div class="progress-bar"><i class="fas fa-weight-hanging"></i></div>
+        </div>
+        <div data-inventory="player" class="player-quick">
+            <div class="player-quick-head">QUICK</div>
+            <div class="player-quick-items"></div>
+        </div>
+        <div data-inventory="player" class="player-pocket">
+            <div class="player-pocket-head">POCKETS</div>
+            <div class="player-pocket-items"></div>
+        </div>
+        <input id="amount" min="0" max="1000" type="number" oninput="validity.valid||(value='');" placeholder="Amount">
+        <input id="search" min="0" max="1000" type="text" placeholder="Search">
+        <div class="use-item">
+            <div class="use-item-text">
+                <i class="fas fa-hand-holding"></i>
+                Drag the item here to use
+            </div>
+        </div>
+        <div class="drop-item">
+            <i class="fas fa-trash"></i>
+        </div>
+        <div class="crafting-toggle">
+            <span>
+                <i class="fas fa-tools"></i> CRAFT
+            </span>
+        </div>
+        <div data-inventory="player" class="player-inventory">
+            <div style="position: fixed;top:23vh;" class="player-inventory-head">BACKPACK</div>
+            <div class="player-items"></div>
+        </div>
+        <div data-inventory="other" class="other-inventory">
+            <div style="position: fixed;top:23vh;" class="other-inventory-head">OTHER</div>
+            <div class="other-items"></div>
+        </div>
+        <div class="crafting-inventory">
+            <div style="position: fixed;top:23vh;" class="other-inventory-head">CRAFTING</div>
+            <div class="crafting-items"></div>
+        </div>
+        <div class="cloth-inv">
+            <div class="cloth-items">
+                <div class="cloth-inv-head">CLOTHING</div>
+                <div id="mask" class="item-box">
+                    <img src="cloth/mask.svg">
+                    <span>MASK</span>
+                </div>
+                <div id="glasses" class="item-box">
+                    <img src="cloth/glasses.svg">
+                    <span>GLASSES</span>
+                </div>
+                <div id="top" class="item-box">
+                    <img src="cloth/shirt.svg">
+                    <span>SHIRT</span>
+                </div>
+                <div id="shirt" class="item-box">
+                    <img src="cloth/jacket.svg">
+                    <span>JACKET</span>
+                </div>
+                <div id="vest" class="item-box">
+                    <img src="cloth/vest.svg">
+                    <span>VEST</span>
+                </div>
+                <div id="pants" class="item-box">
+                    <img src="cloth/pants.svg">
+                    <span>PANTS</span>
+                </div>
+                <div id="shoes" class="item-box">
+                    <img src="cloth/shoes.svg">
+                    <span>SHOES</span>
+                </div>
+                <div id="hat" class="item-box">
+                    <img src="cloth/hat.svg">
+                    <span>HAT</span>
+                </div>
+            </div>
+            <img src="https://cdn.discordapp.com/attachments/792354466576990259/886560870270926898/strokeeE.png" class="skel">
+        </div>
+        <div class="logs"></div>
+        <div class="settings">
+            <i class="fas fa-sliders-h"></i>
+            <div class="settings-tab">
+                <span>Disable Tooltip <input id="tooltip-checkbox" type="checkbox"></span>
+                <span>Disable Background Blur <input id="blur-checkbox" type="checkbox"></span>
+                <span>More Coming Soon!</span>
+            </div>
+        </div>
+    </div>
+    <div class="quick-hotbar">
+        <div class="player-quick-head">QUICK</div>
+    </div>
+    <script src='app.js'></script>
+</body>

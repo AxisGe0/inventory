@@ -51,8 +51,10 @@ local Player = InvFunctions.GetPlayer()
 ```lua
 local Player = InvFunctions.GetPlayer(source)
 ```
-**source**  `type:number(player's id)`\
-\
+**source**  `type:number(player's id)`
+
+<hr/>
+
 **Adding Items**\
 `Server Side`
 ```lua
@@ -62,7 +64,7 @@ Player.Functions.AddItem(name,amount,slot,info)
 **name**  `type:string`\
 **amount** `type:number`\
 **slot** `type:number(leave it nil if not required)`\
-**info**  `type: table`\
+**info**  `type: table`
 
 <hr/>
 

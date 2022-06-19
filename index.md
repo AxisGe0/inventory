@@ -74,7 +74,7 @@ Player.Functions.Remove(name,amount,slot)
 **amount** `type:number`\
 **slot** `type:number(leave it nil if not required)`
 \
-\
+
 
 <hr/>
 

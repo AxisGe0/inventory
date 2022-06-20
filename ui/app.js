@@ -50,7 +50,7 @@ AXFW.Inventory.Open = function(items,refresh,other,plyweight){
         $.each(other.items,function(k,v){
             if(v != null){
                 $('.inventory').find(`[data-other-slot="${v.slot}"]`).html(`
-                    <img src="items/${v.image}.png">
+                    <img src="items/${v.name}.png">
                     <div class="item-amount">${v.amount}</div>
                     <div style="background:${GetQualityColor(v.info.quality)}" class="item-quality"></div>
                 `).removeData().data(v)
@@ -223,7 +223,7 @@ AXFW.Inventory.OpenHotbar = function(data){
         if(v){
             $('.quick-hotbar').find(`[data-hotbar-slot=${v.slot}]`).html(`
                 <div class="item-hotbar-key">${v.slot}</div>
-                <img src="items/${v.image}">
+                <img src="items/${v.name}.png">
                 <div class="item-amount">${v.amount}</div>
             `)
         }

@@ -148,7 +148,7 @@ if IsDuplicityVersion() then
                 return false
             end
             self.Functions.Save = function()
-                Functions.DBQuery("INSERT INTO `player-inventory` (`identifier`, `inventory`) VALUES('"..identifier.."','[]') ON DUPLICATE KEY UPDATE `inventory` = '"..json.encode(self.inventory).."' ")
+                Functions.DBQuery("INSERT INTO `player-inventory` (`identifier`, `inventory`) VALUES('"..identifier.."','"..json.encode(self.inventory).."') ON DUPLICATE KEY UPDATE `inventory` = '"..json.encode(self.inventory).."' ").."' ")
                 return true
             end
         end

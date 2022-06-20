@@ -4,6 +4,7 @@ if IsDuplicityVersion() then
         local src = source
         local name = GetPlayerName(src)
         local Player = Functions.GetPlayer(src)
+        if not Player then return end
         Player.Functions.Save()
         print("AXFW-INVENTORY: "..name.." Inventory Saved!")
     end)

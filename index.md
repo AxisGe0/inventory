@@ -96,3 +96,10 @@ local Player = InvFunctions.GetPlayer()
 print(Player.inventory)
 ```
 <hr/>
+
+**Opening Stash**\
+`Client Side`
+```lua
+TriggerClientEvent('ax-inv:Server:OpenInventory','stash_name',{slots=int})
+```
+<hr/>

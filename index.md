@@ -100,13 +100,13 @@ print(Player.inventory)
 **Opening Stash**\
 `Client Side`
 ```lua
-TriggerClientEvent('ax-inv:Server:OpenInventory','stash_name',{slots=int})
+TriggerServerEvent('ax-inv:Server:OpenInventory','stash_name',{slots=int})
 ```
 <hr/>
 
 **Opening Inventory of other players**\
 `Client Side`
 ```lua
-TriggerClientEvent('ax-inv:Server:OpenPlayerInventory',player id/source [int])
+TriggerServerEvent('ax-inv:Server:OpenPlayerInventory',player id/source [int])
 ```
 <hr/>

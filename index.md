@@ -103,3 +103,10 @@ print(Player.inventory)
 TriggerClientEvent('ax-inv:Server:OpenInventory','stash_name',{slots=int})
 ```
 <hr/>
+
+**Opening Inventory of other players**\
+`Client Side`
+```lua
+TriggerClientEvent('ax-inv:Server:OpenPlayerInventory',player id/source [int])
+```
+<hr/>

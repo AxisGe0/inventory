@@ -57,7 +57,7 @@ GetPlayerWeight = function()
     local weight = 0
     local inventory = InvFunctions.GetPlayer().inventory
     for k,v in pairs(inventory) do 
-        weight = 0
+        weight = weight + Shared.Items[v.name].weight
     end
     local percentage = (weight/1000)/(120000/100000)
     return percentage 

@@ -76,7 +76,7 @@ Player.Functions.AddItem(name,amount,slot,info)
 `Server Side`
 ```lua
 local Player = InvFunctions.GetPlayer(source)
-Player.Functions.Remove(name,amount,slot)
+Player.Functions.RemoveItem(name,amount,slot)
 ```
 **name**  `type:string`\
 **amount** `type:number`\
